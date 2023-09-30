@@ -27,6 +27,6 @@ def face_detect(imagePath):
 	for i in range(0, len(faces)):
 		(x, y, w, h) = faces[i]
 		grays.append(gray[y:y+w, x:x+h])
-	print "------------------------------------------------------------"
-	print "Detecting Face -\-"
+	print("------------------------------------------------------------")
+	print("Detecting Face -\-")
 	return grays, faces, len(faces)

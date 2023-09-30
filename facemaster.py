@@ -6,10 +6,10 @@ import training_data as training_data
 label = []
 def predict(test_img):
 	img = cv2.imread(test_img).copy()
-	print "\n\n\n"
-	print "Face Prediction Running -\-"
+	print("\n\n\n")
+	print("Face Prediction Running -\-")
 	face, rect, length = face_detect.face_detect(test_img)
-	print len(face), "faces detected."
+	print(len(face), "faces detected.")
 	for i in range(0, len(face)):
 		labeltemp, confidence = face_recognizer.predict(face[i])
 		label.append(labeltemp)
@@ -26,4 +26,4 @@ predicted_img , label= predict(test_img)
 cv2.destroyAllWindows()
 cv2.waitKey(1)
 cv2.destroyAllWindows()
-print "Recognized faces = ", label
+print("Recognized faces = ", label)
